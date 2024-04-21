@@ -10,7 +10,7 @@
 <body>
     <header>
         <nav>
-            <ul>
+            <ul class="menu">
                 <li> <a href="index.html">Página de Inicio</a></li>
                 <li> <a href="galeria.html">Galería</a></li>
                 <li> <a href="">Contacto</a></li>
@@ -21,27 +21,27 @@
     </header>
 
     <main>
-        <h1>¡Contáctanos!</h1>
+        <h1 class="titulosPaginas">¡Contáctanos!</h1>
         
 
-        <form action="">
+        <form class="formularioContacto" action="">
             <label for="nombre">Nombre</label>
             <input type="text" name="nombre">
             <label for="correo">Correo</label>
             <input type="email" name="correo">
             <label for="tipo">Tipo</label>
             <select name="tipo">
-                <option value="opcion1">Reclamo</option>
-                <option value="opcion2">Sugerencia</option>
-                <option value="opcion3">Felicitaciones</option>
+                <option value="opcion1">Compra</option>
+                <option value="opcion2">Consulta</option>
+                <option value="opcion3">Venta</option>
             </select>
             <label for="mensaje">Mensaje</label>
-            <input type="text" name="mensaje">
+            <textarea name="mensaje" rows="2" cols="40"></textarea>
         </form>
 
     </main>
 
-    <footer>
+    <footer class="pieDePagina">
         <h2>Horario de apertura y cierre</h2>
             <p>Lunes a viernes de 9 am a 4 pm.</p>
             <p>Sabado, domningo y festivos cerrado.</p>
