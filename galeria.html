@@ -35,38 +35,7 @@
                 <h2 class="nombreArtista">Luna Diamante</h2>
             </div>
             
-            <div class="row justify-content-around">
-                <div class="col-6 col-md-4 col-lg-2 text-center contenedor-imagen">
-                    <img src="imagenes/conejito.jpg" alt="Conejo con alas" class="img-thumbnail">
-                    <div class="texto-superpuesto">
-                        <p>"El conejo de los sueños"</p>
-                    </div>
-                </div>
-                    
-                <div class="col-6 col-md-4 col-lg-2 text-center contenedor-imagen">
-                    <img src="imagenes/conejo y abeja.jpg" alt="Conejo y abeja" class="img-thumbnail">
-                    <div class="texto-superpuesto">
-                        <p>"Amigos inesperados"</p>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-2 text-center contenedor-imagen">                
-                    <img src="imagenes/foquita.jpg" alt="Foca en el agua" class="img-thumbnail">
-                    <div class="texto-superpuesto">
-                        <p>"Jugando en las olas"</p>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-2 text-center contenedor-imagen">                
-                    <img src="imagenes/gatito.jpg" alt="Gato y galaxias" class="img-thumbnail">
-                    <div class="texto-superpuesto">
-                        <p>"Gato cósmico"</p>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-2 text-center contenedor-imagen">                
-                    <img src="imagenes/perro 1.jpg" alt="Perro Cooker" class="img-thumbnail">
-                    <div class="texto-superpuesto">
-                        <p>"Amistad leal"</p>
-                    </div>
-                </div>
+            <div id="luna-diamante" class="d-flex justify-content-around">
             </div>
         </section>
 
@@ -75,31 +44,7 @@
                 <h2 class="nombreArtista">Pétalo Encantado</h2>
             </div>
             
-            <div class="row justify-content-around">
-                <div class="col-6 col-md-4 col-lg-3 text-center contenedor-imagen">
-                    <img src="imagenes/Conejo coquette.jpg" alt="Conejo con moños" class="img-thumbnail">
-                    <div class="texto-superpuesto">
-                        <p>"La elegancia del conejo"</p>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-3 text-center contenedor-imagen">
-                    <img src="imagenes/conejos circulo.jpg" alt="Reunión de conejos" class="img-thumbnail">
-                    <div class="texto-superpuesto">
-                        <p>"Reunión"</p>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-3 text-center contenedor-imagen">                
-                    <img src="imagenes/conejos fondo verde.jpg" alt="Conejos en el jardín" class="img-thumbnail">
-                    <div class="texto-superpuesto">
-                        <p>"Jardín de conejos"</p>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-3 text-center contenedor-imagen">                
-                    <img src="imagenes/ranas de la mano.jpg" alt="" class="img-thumbnail">
-                    <div class="texto-superpuesto">
-                        <p>"El encuentro"</p>
-                    </div>
-                </div>
+            <div id="petalo-encantado" class="d-flex justify-content-around">
             </div>    
         </section>
 
@@ -108,31 +53,13 @@
                 <h2 class="nombreArtista">Dulce Mariposa</h2>
             </div>
             
-            <div class="row justify-content-around">
-                <div class="col-6 col-md-4 text-center contenedor-imagen">
-                    <img src="imagenes/gato 1.jpg" alt="" class="img-thumbnail">
-                    <div class="texto-superpuesto">
-                        <p>"El felino con estilo pt.1"</p>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4 text-center contenedor-imagen">
-                    <img src="imagenes/gato 2.jpg" alt="" class="img-thumbnail">
-                    <div class="texto-superpuesto">
-                        <p>"El felino con estilo pt.2"</p>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4 text-center contenedor-imagen">                
-                    <img src="imagenes/just some kittens.jpg" alt="" class="img-thumbnail">
-                    <div class="texto-superpuesto">
-                        <p>"Unión felina"</p>
-                    </div>
-                </div>
+            <div id="dulce-mariposa" class="d-flex justify-content-around">
             </div> 
         </section>
     </main>
 
     <footer class="pieDePagina text-center">
-        <div class="row">
+        <div class="d-flex">
             <div class="col cuadroFooter">
                 <h2 class="tituloFooter"">Horario</h2>
                 <p>Lunes a viernes de 09:00 a 17:30 hrs.</p>
@@ -166,6 +93,33 @@
         </div> 
     </footer>
 
+    <div class="modal modal-lg fade" id="modalGaleria" tabindex="-1" aria-labelledby="modalGaleriaLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content text-center">
+                <div class="modal-header d-flex justify-content-between">
+                    <h1 class="modal-title fs-5 col-10" id="modalGaleriaLabel">Información extra de la obra de arte</h1>
+                    <button type="button" class="btn-close ms-0" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex">
+                        <div class="col">
+                            <img class="img-fluid" id="imagenModal" src="" alt="">
+                        </div>
+                        <div class="col">
+                            <h1 id="titulo-modal"></h1>
+                            <p id="descripcion-modal"></p>
+                            <h2 id="autor-modal"></h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button onclick="eliminar()" type="button" class="btn btn-danger" data-bs-dismiss="modal">Eliminar pintura</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="galeria.js"></script>
 
 </body>
 </html>
